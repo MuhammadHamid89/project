@@ -1,0 +1,44 @@
+if everything is lying or floor
+
+project
+|---public/
+|---src/
+|   |--assests/
+|   |---components/
+|   |---pages/
+|   |---hooks/
+|   |---services/
+|   |--utils/
+|   |---app.jsx
+|   |---main.jsx
+
+assest---images,icons,css
+components-- resuable ui
+pages-- screen - level components
+hooks-- custom react hooks
+services--- API calls
+utils -- helper function
+
+pages are room, components are furniture, assest are decoration , utils are tools
+
+
+/// Feature based structure///
+src/
+    Feature/
+    auth/
+        login.jsx
+        signup.jsx
+        authAPI.jsx
+    products/
+        ProductList.jsx
+        ProductCard.jsx
+
+
+speaker Notes:
+large project group files by feature instead of type.easy for team maintain
+
+meaninful name
+small components
+avoid duplicate code
+keep related files togther
+one responsibility for per file
