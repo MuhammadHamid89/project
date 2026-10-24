@@ -1,15 +1,16 @@
-import Home from "./pages/Home";
-
-function app(){
-  const name='ali'
+function App(){
+  const students=['ali','ahmad','sara']
+  const isTeacher=false
   return(
-    <>
-    {/* <Home /> */}
-
-    <h1>hello {name}</h1>
-    <p>welcome to react</p>
-    <button className="btn">start learning</button>
-    </>
+  <>
+  <h1>Reactt class</h1>
+  {isTeacher && <p>Teacher Mode</p>}
+  <ul>
+    {students.map((student,index)=>(
+      <li key={index}>{student}</li>
+    ))}
+  </ul>
+  </>
   )
 }
-export  default app
+export default App
