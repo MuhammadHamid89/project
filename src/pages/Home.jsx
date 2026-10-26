@@ -3,7 +3,7 @@ function Home(){
     return(
         <>
         <Header />
-        <p className="text-5xl font-bold text-blue-600">this is home page</p>
+        {/* <p className="text-5xl font-bold text-blue-600">this is home page</p> */}
         </>
     )
 }
