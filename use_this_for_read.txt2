@@ -1,0 +1,212 @@
+<------->in this page <------>
+<----------------->we covered topics<----------------->
+cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,
+
+
+
+
+<------------->//1 :- practice for name and wrap in fragments <--------------->
+using if statement in react
+
+function app(){
+  const name='ali'
+  return(
+    <>
+    {/* <Home /> */}
+
+    <h1>hello {name}</h1>
+    <p>welcome to react</p>
+    <button className="btn">start learning</button>
+    </>
+  )
+}
+
+
+<------------------> example 2: <---------------->
+//Conditional rendering ka matlab hai kisi condition (shart) ke mutabiq UI 
+//(user interface) mein elements ko dikhana ya chhupana.
+
+function App(){
+  const  isLogin=true
+  if(isLogin){
+    return <h1>welcome</h1>
+  }
+  return  <h1>please login</h1>
+}
+export default  App
+
+
+<--------------> example 3: <------------------------>
+Ternary operator ek shortcut hai jo if-else ki jagah ek single line mein condition check karne ke liye istemal
+ hota hai (Syntax: condition ? true_value : false_value).
+
+Syntax : condition ? truepart : falsepart
+
+function App(){
+ const islogin=true
+ return(
+  <>
+  {islogin ? <h1>welcome</h1> : <h2>please Login</h2>}
+  </>
+ )
+}
+export default  App
+
+
+<-------------------> //method 3 Logical AND (&&) <------------------->
+&& (AND) operator ka matlab hai ke agar pehli condition true ho, sirf
+ tabhi agla element ya code render (chalao) hoga.
+
+ function App(){
+ const islogin=true
+ return(
+  <>
+  {islogin && <p>have notify</p>}
+  </>
+ )
+}
+export default  App
+
+
+<--------> render Array list <--------->
+function App(){
+  const fruits=['apple','banana','mango']
+  return(
+   <ul>
+    {fruits.map((fruit,index)=>(
+      <li key={index}>{fruit}</li>
+    ))}
+   </ul>
+  )
+}
+export default App
+
+<---------> complete example of list and operator and map <--------->
+function App(){
+  const students=['ali','ahmad','sara']
+  const isTeacher=false
+  return(
+  <>
+  <h1>Reactt class</h1>
+  {isTeacher && <p>Teacher Mode</p>}
+  <ul>
+    {students.map((student,index)=>(
+      <li key={index}>{student}</li>
+    ))}
+  </ul>
+  </>
+  )
+}
+export default App
+
+
+<---------- >map operator <----------->
+.map() array ke har item ko loop karke naya array banata hai, aur isme JSX render karne ke liye round brackets () 
+aur logic likhne ke liye curly braces {} use hote hain.
+
+
+<-------------> Basic components <------------------->
+import Header from "./Components/Header";
+
+function App(){
+  return(
+    <>
+    <Header />
+    </>
+  )
+}
+export default Header
+hum phly  Header.jsx ki file bananae gy or phir osko App.jsx my import kr k use kry gy
+
+<----------------->Props <------------------------>
+Props (properties) are read-only arguments passed into React components like HTML attributes
+ to dynamically share and pass data from a parent component to a child component.
+ agr hum ny parent file my (app.jsx) my jo value di hain wo hum dosri file my (header.jsx, student.jsx)
+ update ni kr skty agr change krna hain to hum state ka use kry gy.
+
+ props follow one way data flows.
+
+ ## props data type
+ -- string
+ -- boolean
+ -- number
+ -- array
+ -- object
+ -- function
+ -- JSX
+
+ -----> props simple example <----------
+ file Name : student.jsx
+
+ function Student(props){
+    console.log('props',props)
+    return(
+        <>
+        <h2>name:{props.name}</h2>
+        <h2>age:{props.age}</h2>
+        <h2>city:{props.city}</h2>
+
+        </>
+    )
+}
+export default Student
+
+function Student({name,age,city}){
+    // console.log('props',props)
+    return(
+        <>
+        <h2>name:{name}</h2>
+        <h2>age:{age}</h2>
+        <h2>city:{city}</h2>
+
+        </>
+    )
+}
+export default Student
+// example 2 : destaructure if have object data type data
+function Student({name,age,city}){
+    // console.log('props',props)
+    return(
+        <>
+        <h2>name:{name}</h2>
+        <h2>age:{age}</h2>
+        <h2>city:{city}</h2>
+
+        </>
+    )
+}
+export default Student
+
+///agr hum ek my name ni dey or dosry my hain osko kis trha likhna hain mgr app.jsx file my 
+// name ni likha hoga simple mtlb ye hai..
+
+function Student({name='unknow',age,city}){
+    // console.log('props',props)
+    return(
+        <>
+        <h2>name:{name}</h2>
+        <h2>age:{age}</h2>
+        <h2>city:{city}</h2>
+
+        </>
+    )
+}
+export default Student
+
+
+
+------------>App.jsx file:  <-----------
+
+import Student from "./Components/StudentCard"
+
+function App(){
+  // const name='ali'
+  return(
+    <>
+    <Student name='ahmad' age={15} city='lahore' />
+    <Student name='ali' age={25} city='ISB' />
+    <Student name='akarm' age={35} city='Multan' />
+    </>
+  )
+}
+export default App

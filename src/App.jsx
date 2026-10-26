@@ -1,13 +1,12 @@
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
+import Student from "./Components/StudentCard"
 
 function App(){
+  // const name='ali'
   return(
     <>
-    <Header />
-    <Footer />
-    <Navbar />
+    <Student  age={15} city='lahore' />
+    <Student name='ali' age={25} city='ISB' />
+    <Student name='akarm' age={35} city='Multan' />
     </>
   )
 }
