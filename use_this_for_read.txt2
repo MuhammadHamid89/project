@@ -1,6 +1,7 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
-cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,
+cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
+useStae,
 
 
 
@@ -280,9 +281,7 @@ function App(){
   const studentName='ali'
   return(
     <>
-   {/* <Card> // prop child
-    <h2>hello to main file</h2>
-   </Card> */}
+  
     <h1>react prop drilling</h1>
     <Parent studentName={studentName} />
 
@@ -335,3 +334,37 @@ function GrandChild({studentName}){
     )
 }
 export default GrandChild
+
+<-------------------------------> UseState (hook) <--------------------------------->
+useStae:
+useState ek React Hook hai jo functional components me dynamic data (state)
+ ko track aur update karne ki ijazat deta hai taake data badalne par screen automatically 
+ re-render ho jaye.
+
+ // 1: - useState.jsx file:
+ import { useState } from "react";
+function UseState(){
+  const[count,setCount]=useState(0)
+  return(
+    <>
+    <h1>{count}</h1>
+    <button onClick={()=>setCount(count+1)}>press this</button>
+    </>
+  )
+}
+export default UseState
+
+
+
+
+/// 2: - App.jsx(file):
+import UseState from "./Components/UseState"
+
+function App(){
+  return(
+    <>
+    <UseState />
+    </>
+  )
+}
+export default App
