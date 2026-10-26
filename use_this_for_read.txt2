@@ -210,3 +210,128 @@ function App(){
   )
 }
 export default App
+
+
+<--------------> child props <--------->
+React automatically provide a special prop called children. it contain everything written between
+the opening and closing tags of a components.
+
+childprop : Card.jsx file:
+
+//in this file practice child prop
+function Card({children}){
+    console.log('children',children)
+    return(
+        <>
+        <h1 className="card">{children}</h1>
+        </>
+    )
+}
+export default  Card
+
+App.jsx file:
+
+import Card from "./Components/Cardchildprop"
+
+function App(){
+  // const name='ali'
+  return(
+    <>
+   <Card>
+    <h2>hello to main file</h2>
+   </Card>
+    </>
+  )
+}
+export default App
+
+--------> Note :
+hum simpe prop my oski k andar value dety hain import kr k (App.jsx) file k andar
+<Student name='ahmad' age={15} city='lahore' />
+
+or child prop my (App.jsx) k file k andar import kr k os k darmiyan dety hain
+   <Card>
+    <h2>hello to main file</h2>
+   </Card>
+
+
+
+<--------------> Props Drilling <------------------>
+Props drilling ek aisi situation hai jahan data ko kisi deep child component tak pohanchane ke liye usay darmiyan wale tamam levels (intermediate components)
+ se zabardasti pass karna parta hai, chahe unhe us data ki zaroorat na bhi ho.
+
+ App
+ |
+ |
+ parent
+ |
+ |
+ child
+|
+|
+grandparent
+
+the user object is passed through every components
+
+1: - App.jsx file:
+import Parent from "./Components/Parent"
+
+function App(){
+  const studentName='ali'
+  return(
+    <>
+   {/* <Card> // prop child
+    <h2>hello to main file</h2>
+   </Card> */}
+    <h1>react prop drilling</h1>
+    <Parent studentName={studentName} />
+
+    </>
+  )
+}
+export default App
+
+
+2: - parent.jsx file:
+import Child from "./Child"
+function Parent({studentName}){
+    return(
+        <>
+        <div style={{border:"2px solid blue",padding:'10px',margin:'10px'}}>
+        <h2>this is parents  Components</h2>
+        {/* passing the prop to child */}
+        <Child studentName={studentName}/>
+        </div>
+        </>
+    )
+}
+export default Parent
+
+3: - child.jsx file:
+// prop drilling
+import GrandChild from "./GrandChild"
+function Child({studentName}){
+    return(
+        <>
+        <div style={{border:'2px solid blue', margin:'10px', padding:'10px'}}>
+            <h2>child Components</h2>
+            {/* passing the same prop agian */}
+            <GrandChild studentName={studentName} />
+        </div>
+        </>
+    )
+}
+export  default Child
+
+4: - GrandChild.jsx file:
+function GrandChild({studentName}){
+    return(
+        <>
+        <div style={{border:'2px solid red',margin:'10px', padding:'10px'}}>
+            <h2>Grandchild Components</h2>
+            <h3>student Name :{studentName}</h3>
+        </div>
+        </>
+    )
+}
+export default GrandChild
