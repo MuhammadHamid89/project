@@ -1,7 +1,7 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
-useStae,state with object and spread operator
+useStae,state with object and spread operator, state lifting,event handler, Form
 
 
 
@@ -383,3 +383,47 @@ Spread operator (...) purane data ki ek new copy banata hai,
 us mein naye items ya changes add karta hai, aur ek hi line mein original
  data ko disturb kiye baghair naye data se update kar deta hai.
 
+<-------------------------------------------------------------------------------------------->
+
+<---------------------------> State Lifting <---------------------------------------->
+/// State Lifting : -
+State lifting React mein child components se data ko unke common 
+parent component mein move karne ko kehte hain taake wo 
+data dono ya sabhi sibling components mein share ho sake.
+
+
+// why need state lifting : -
+State lifting ki zaroorat isliye pari kyun ke React mein data sirf
+ upar se neeche (parent to child) flow hota hai, isliye sibling components ko
+ aapas mein data share karne ke liye ek common parent ki zaroorat hoti hai.
+
+
+<--------------------------------------------------------------------------------------------->
+<-------------------------------> event Handling in react <------------------------------------>
+// difference between html and react event:
+// 1: Html event:-
+HTML events browser ke native event handling ko lowercase mein use karte hain (jaise onclick), 
+<button onclick='sayhello()'>click me </button>
+
+// 2 : - React event : -
+jabki 
+React events synthetic events ka use karte hain jo cross-browser compatibility ke 
+liye camelCase mein likhe jaate hain (jaise onClick).
+<button onClick={hello}>click me </button>
+
+//3 : synthetic event :-
+Synthetic events React ka apna ek wrapper hain jo browser ke native events ko lapet kar sabhi browsers 
+(Chrome, Safari, Firefox) mein ek jaisa aur smooth kaam karne ki sahulat deta hai.
+
+ <button onClick={greet()}>say hello</button> <-- functional call automatically output when page reload
+
+  <button onClick={greet}>say hello</button> <-- reference call output see when click button 
+
+
+  <---------------------------------------------------------------------------------------------------->
+  <--------------------> Forms <------------------------------------->
+  // Forms:
+  Form ek aisa interactive element hai jiske zariye user se input data (jaise text, email, password)
+   collect karke server ya component state mein submit kiya jata hai.
+
+   
