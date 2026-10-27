@@ -1,10 +1,9 @@
-import ReactForm from "./Components/ReactForm"
+import UseState from "./Components/UseState"
 
 function App(){
-
   return(
     <>
-    <ReactForm />
+    <UseState />
     </>
   )
 }
