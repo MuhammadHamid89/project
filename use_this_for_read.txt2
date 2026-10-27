@@ -1,7 +1,7 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
-useStae,state with object and spread operator, state lifting,event handler, Form
+useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI
 
 
 
@@ -426,4 +426,10 @@ Synthetic events React ka apna ek wrapper hain jo browser ke native events ko la
   Form ek aisa interactive element hai jiske zariye user se input data (jaise text, email, password)
    collect karke server ya component state mein submit kiya jata hai.
 
-   
+<------------------------------------------------------------------------------------------------------->
+<--------------------------------> Handle UI <------------------------------------------------->
+// 1: Handle UI :-
+UI handling ka matlab hai user ke actions (jaise click, type, ya scroll) ke mutabiq screen par
+ dikhne wale interface (UI) ko dynamic tareeqe se update aur manage karna.
+
+useeffect use for api call perform krni ho
