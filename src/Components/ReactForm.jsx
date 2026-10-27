@@ -12,43 +12,90 @@
 // }
 // export default ReactForm
 
+
+// react form
+// import { useState } from "react";
+// export default function ReactForm(){
+//     const[email,setEmail]=useState('')
+//     const[password,setPassword]=useState('')
+//     const[message,setMessage]=useState('')
+//     const[city,setCity]=useState('')
+//     const[agree,setAgree]=useState(false)
+
+//     const handleSubmit=(e)=>{
+//         console.log(e)    // refresh sy rokta hain
+//         e.preventDefault();
+//         console.log({email,password,message,city,agree})
+//     }
+//     // hum isko bi use kr skty hain
+//     // function handleSubmit(e){
+//     //     e.preventDefault();
+//     //     console.log({email,password})
+//     //}
+
+//     return(
+//         <>
+//         <form onSubmit={handleSubmit}>
+//             <input type="email" placeholder="enter mail" value={email} onChange={(e)=>setEmail(e.target.value)} />
+//             <input type="password" placeholder="enter password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+//             <textarea name="message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+//             <select value={city} onChange={(e)=>setCity(e.target.value)}>
+//                 <option>lahore</option>
+//                 <option>karachi</option>
+//             </select>
+//             <input type="checkbox" checked={agree} onChange={(e)=>setAgree(e.target.value)} />
+
+
+
+//             <button type="submit">login</button>
+
+
+//         </form>
+//         </>
+//     )
+// }
+
+
+// oper hum ny kafi state banae thi onko handle is trha kry gy
 import { useState } from "react";
 export default function ReactForm(){
-    const[email,setEmail]=useState('')
-    const[password,setPassword]=useState('')
-    const[message,setMessage]=useState('')
-    const[city,setCity]=useState('')
-    const[agree,setAgree]=useState(false)
-
-    const handleSubmit=(e)=>{
-        console.log(e)    // refresh sy rokta hain
-        e.preventDefault();
-        console.log({email,password,message,city,agree})
+    const[form, setForm]=useState({
+        name:'',
+        email:'',
+        course:'',
+    })
+    const handleChange=(e)=>{
+        console.log(e.target.name)
+        console.log(e.target.value)
+        const{name,value}=e.target;
+        setForm({
+            ...form,[name]:value
+        })
     }
-    // hum isko bi use kr skty hain
-    // function handleSubmit(e){
-    //     e.preventDefault();
-    //     console.log({email,password})
-    //}
 
+    // condition apni mrzi sy pass ki hain
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        if(!form.name || !form.email || !form.course){
+            alert('please fill all inputs')
+            return;
+        }
+        alert('form submit successfully')
+        console.log(form)
+    }
     return(
         <>
         <form onSubmit={handleSubmit}>
-            <input type="email" placeholder="enter mail" value={email} onChange={(e)=>setEmail(e.target.value)} />
-            <input type="password" placeholder="enter password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-            <textarea name="message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-            <select value={city} onChange={(e)=>setCity(e.target.value)}>
-                <option>lahore</option>
-                <option>karachi</option>
-            </select>
-            <input type="checkbox" checked={agree} onChange={(e)=>setAgree(e.target.value)} />
-
-
-
-            <button type="submit">login</button>
-
-
+        <input type="text" name="name" placeholder="enter name" value={form.value} onChange={handleChange} />
+        <input type="email" name="email" placeholder="enter email" value={form.value}  onChange={handleChange}/>
+        <input type="text" name="course" placeholder="course" value={form.value} onChange={handleChange} />
+        <button type="submit">click me</button>
         </form>
+
+
+        <p>Name:{form.name}</p>
+        <p>email:{form.email}</p>
+        <p> Course :{form.course}</p>
         </>
     )
 }
