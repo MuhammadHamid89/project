@@ -1,7 +1,7 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
-useStae,state with object and spread operator
+useStae,state with object and spread operator, state lifting
 
 
 
@@ -383,3 +383,16 @@ Spread operator (...) purane data ki ek new copy banata hai,
 us mein naye items ya changes add karta hai, aur ek hi line mein original
  data ko disturb kiye baghair naye data se update kar deta hai.
 
+<-------------------------------------------------------------------------------------------->
+
+<---------------------------> State Lifting <---------------------------------------->
+/// State Lifting : -
+State lifting React mein child components se data ko unke common 
+parent component mein move karne ko kehte hain taake wo 
+data dono ya sabhi sibling components mein share ho sake.
+
+
+// why need state lifting : -
+State lifting ki zaroorat isliye pari kyun ke React mein data sirf
+ upar se neeche (parent to child) flow hota hai, isliye sibling components ko
+ aapas mein data share karne ke liye ek common parent ki zaroorat hoti hai.
