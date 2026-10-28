@@ -1,7 +1,8 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
-useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect
+useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
+API
 
 
 
@@ -471,3 +472,10 @@ useEffect ka clean-up function ek aesa return function hota hai jo
  ya subscription subscriptions) ko saaf/cancel karne ke liye use hota hai.    
 
  agr na use kry ye to to memory leakage ho skti hain
+
+
+ <----------------------------------------------------------------------------------------------------->
+ <----------------------------------> API Integration <---------------------------------------------->
+ // what is API:
+ An API (Application Programming Interface) is a software intermediary that allows two different
+  applications to communicate and share data or functionality with each other.
