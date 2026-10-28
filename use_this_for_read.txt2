@@ -1,7 +1,7 @@
 <------->in this page <------>
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
-useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI
+useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect
 
 
 
@@ -433,3 +433,39 @@ UI handling ka matlab hai user ke actions (jaise click, type, ya scroll) ke muta
  dikhne wale interface (UI) ko dynamic tareeqe se update aur manage karna.
 
 useeffect use for api call perform krni ho
+
+<---------------------------------------------------------------------------------------------------->
+<------------------------------> Use Effect <--------------------------------------------------->
+
+// 1  : - useeffect:
+useEffect React ka ek built-in hook hai jo component ke render hone ke baad external operations 
+(side effects) jaise data fetching, API calls, timers set karne,
+ ya DOM ko manually update karne ke liye use hota ha
+
+// Basic Structure:
+useEffect(()=>{
+  // side Effect
+},[])
+
+useEffect require two parameter one is arrow function, dependency array.
+
+// useEffect clean up function: (is arrow function my kuch return kr rhy hoty hain):
+useEffect(()=>{
+  // side Effect
+  console.log('mounted')
+  return() =>{
+    // clean up function
+    console.log('unmpunted')
+  }
+},[])
+
+[]= dependency array my hum wo value dety hain k jb bi value change hoto useEffect re-render ho 
+    agr na dy to hum sirf ek dafa useEffect chaly ga. or agr dependency array na dy to hum infinite 
+    loop my phas jae gy
+
+
+// clean up function:
+useEffect ka clean-up function ek aesa return function hota hai jo
+ component ke unmount (remove) hone par ya agle render ke chalne 
+ se pehle purane effects (jaise active timers, event listeners,
+ ya subscription subscriptions) ko saaf/cancel karne ke liye use hota hai.    
