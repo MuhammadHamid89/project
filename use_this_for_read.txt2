@@ -469,3 +469,5 @@ useEffect ka clean-up function ek aesa return function hota hai jo
  component ke unmount (remove) hone par ya agle render ke chalne 
  se pehle purane effects (jaise active timers, event listeners,
  ya subscription subscriptions) ko saaf/cancel karne ke liye use hota hai.    
+
+ agr na use kry ye to to memory leakage ho skti hain
