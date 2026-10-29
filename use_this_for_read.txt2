@@ -2,7 +2,7 @@
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
-API
+API, React-router-dom, link and navlink and useNavigate
 
 
 
@@ -479,3 +479,52 @@ useEffect ka clean-up function ek aesa return function hota hai jo
  // what is API:
  An API (Application Programming Interface) is a software intermediary that allows two different
   applications to communicate and share data or functionality with each other.
+
+  fetch k sat response ko json my convert krna pary ga
+
+  useEffect my hum api lany k liye fetch use krty hain 
+  magr is k elwah hum Axios ka bi use kr skty hain
+
+  for install : npm install axios (ye bi api fetch k liye use hota hain)
+  axios by default json return krta hain
+
+  <---------------------------------------------------------------------------------------------------->
+  <---------------------------> React-Router-Dom <------------------------------------------------>
+  // React- Router_ dom:
+  React Router DOM ek JavaScript library hai jo web applications me browser
+   URL ke mutabiq alag-alag pages
+   (components) ko bina page reload kiye dikhane (routing ke liye) use hoti hai
+
+   //  For install :
+   npm website search ( instal react router dom):
+   write in vs terminal:
+   npm i react-router-dom
+
+
+   // update main.jsx file:
+
+  import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom' // ye import krna hain
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>  // app ko browser my wrap krna hain
+    <App />
+    </BrowserRouter>
+  </StrictMode>,
+)
+
+
+
+/// navlink:
+Link simple navigation ke liye use hota hai, jabki NavLink uski 
+ka advanced version hai jo active page ke link ko
+ automatically highlight (style ya class add) karne ke liye use hota hai.
+
+
+ // useNavigate:
+ useNavigate ek hook hai jo aapko code (jaise button click ya form submit) ke zariye
+  zabardasti user ko dusre page par bhejne (programmatic navigation) ke liye use hota hai.
