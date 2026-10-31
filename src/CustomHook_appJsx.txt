@@ -1,0 +1,9 @@
+import Custom_Hook from "./pages/CustomHook_Counter";
+export default function App(){
+  return(
+    <>
+    <Custom_Hook/>
+    <Custom_Hook/>
+    </>
+  )
+}

@@ -2,7 +2,8 @@
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
-API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition
+API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
+custom Hooks
 
 
 
@@ -552,3 +553,23 @@ ka advanced version hai jo active page ke link ko
     React Composition aik aisi technique hai jahan chote aur
      alag-alag components ko aapas mein jor kar (combine kar ke) 
     aik naya aur bara component banaya jata hai, taake code flexible aur reusable rahe.
+
+<------------------------------------------------------------------------------------------------->
+<-----------------------------> custom hook <---------------------------------------------->
+// custom Hooks:
+Custom Hook React ka aik aisa khud se banaya hua function hai jo
+ reusable stateful logic (jaise API fetch karna ya form handle karna) 
+ko aik jagah jama karta hai taake use mukhtalif components mein bar bar istemal kiya ja sake.
+
+import { useState } from "react"
+export default function Counter(initialvalue=0){
+    const [count,setCount]=useState(initialvalue)
+    const increment=()=>setCount(count+1)
+    const decrement =()=>setCount(count-1)
+    const reset= () => setCount(initialvalue)
+    {count,increment,decrement,reset}
+    return(
+        <>
+        </>
+    )
+}
