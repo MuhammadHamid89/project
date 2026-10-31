@@ -2,7 +2,7 @@
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
-API, React-router-dom, link and navlink and useNavigate, Context API
+API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition
 
 
 
@@ -538,3 +538,17 @@ ka advanced version hai jo active page ke link ko
   Context API React ka aik built-in feature hai jo aap ko poori
    application mein data (state) ko asaani se share karne
    ki ijazat deta hai, baghair har level par props pass kiye (jise "prop drilling" kaha jata hai).
+
+
+   <--------------------------------------------------------------------------------------------->
+   <-----------------------> Reusable code <------------------------------------------------->
+
+   // Reusable code :
+   React Reusable Component aik aisa isolated code block 
+   (button, card, ya input field) hota hai jise aik baar bana kar poori application mein alag-alag
+    jagah alag data ke sath bar bar istemal (reuse) kiya jata hai taake code duplicate na ho.
+
+    /// React composition:
+    React Composition aik aisi technique hai jahan chote aur
+     alag-alag components ko aapas mein jor kar (combine kar ke) 
+    aik naya aur bara component banaya jata hai, taake code flexible aur reusable rahe.
