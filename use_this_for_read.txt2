@@ -2,7 +2,7 @@
 <----------------->we covered topics<----------------->
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
-API, React-router-dom, link and navlink and useNavigate
+API, React-router-dom, link and navlink and useNavigate, Context API
 
 
 
@@ -528,3 +528,13 @@ ka advanced version hai jo active page ke link ko
  // useNavigate:
  useNavigate ek hook hai jo aapko code (jaise button click ya form submit) ke zariye
   zabardasti user ko dusre page par bhejne (programmatic navigation) ke liye use hota hai.
+
+
+  <-------------------------------------------------------------------------------------------->
+
+  <-----------------------------> Context api <--------------------------------------------->
+
+  //Context api:
+  Context API React ka aik built-in feature hai jo aap ko poori
+   application mein data (state) ko asaani se share karne
+   ki ijazat deta hai, baghair har level par props pass kiye (jise "prop drilling" kaha jata hai).

@@ -1,0 +1,19 @@
+import { Routes,Route } from "react-router-dom";
+import Header from './Components/Header'
+import AllUsers from './pages/AllUsers'
+import Home from './pages/Home'
+import UserDetail from "./pages/UserDetail";
+// import Products from "./pages/Product";
+export default function App (){
+  return(
+    <>
+    <Header/>
+    <Routes>
+      <Route  path="/" element={<Home/>} />
+      <Route  path="/users" element={<AllUsers/>} />
+      <Route  path="/users/:id" element={<UserDetail/>} />
+      {/* <Route  path="/product" element={<Products/>} /> */}
+    </Routes>
+    </>
+  )
+}
