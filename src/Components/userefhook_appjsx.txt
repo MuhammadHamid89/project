@@ -1,0 +1,21 @@
+// export default function App(){
+//   return(
+//     <>
+//     <div className="p-6">
+//       <input type="text" placeholder="type here" className="border p-3 rounded" />// yaha py cursor ka focus set ho 
+//                                                                                   // hum html my documentelementbyid sy krt hain
+//     </div>
+//     </>
+//   )
+// }
+
+import Refhook from "./Components/UseRefHook";
+
+
+export default function App(){
+  return(
+    <>
+    <Refhook/>
+    </>
+  )
+}

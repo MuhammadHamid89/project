@@ -3,7 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks
+custom Hooks, 
 
 
 
@@ -573,3 +573,13 @@ export default function Counter(initialvalue=0){
         </>
     )
 }
+
+
+<---------------------------------------------------------------------------------------------------->
+<--------------------------------> Use Ref <---------------------------------------------------------->
+
+// Use Ref :
+useRef React ka ek hook hai jo functional components mein mutable values ko store karne
+ (bina re-render trigger kiye) aur DOM elements ko directly access karne ke liye use hota hai.
+
+ yani jo likhna hai wha khud btae k yha likhna hain
