@@ -3,7 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo
+custom Hooks, Use memo , useCallback,
 
 
 
@@ -592,9 +592,32 @@ useRef React ka ek hook hai jo functional components mein mutable values ko stor
  // useMemo React ka ek hook hai jo kisi expensive calculation ke result ko cache
   (memorize) karne ke liye use hota hai taake har render par wo calculation dobara run na ho.
 
+ /// Syntax :
+
   import {useMemo,useState} from 'react'
   const value=useMemo(
     ()=>{
       return calculation
     },
-   [] )
+   [dependency] )
+
+
+   <------------------------------------------------------------------------------------------------>
+
+   <-----------------------------------> use callback <------------------------------------------->
+
+   // use callback:
+   useCallback React ka ek hook hai jo kisi function ke instance ko cache (memorize) 
+   karne ke liye use hota hai taake har render par wo function naye siray se recreate na ho.
+
+   // Syntax:
+   const memorizeFunction= useCallback (()=>{
+    // code
+   }, [dependency])
+
+   //function App(){
+    const sayHello= ()=>{
+      console.log('hello')
+    }
+    return <Child onClick={sayHello} />
+   }
