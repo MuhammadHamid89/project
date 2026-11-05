@@ -3,8 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo , useCallback,
-
+custom Hooks, Use memo , useCallback,React.memo
 
 
 
@@ -621,3 +620,29 @@ useRef React ka ek hook hai jo functional components mein mutable values ko stor
     }
     return <Child onClick={sayHello} />
    }
+
+   <----------------------------------------------------------------------------------------------->
+   <-------------------------> React.memo <--------------------------------------------------->
+
+   // React memo:
+   React.memo ek Higher-Order Component (HOC) hai jo poore ke poore component
+    ko re-render hone se bachata hai agar uske props tabdeel (change) na hue hon.
+
+    // 1 : -- simple word:
+    • Aam taur par: Jab ek parent component re-render hota hai,
+     to uske andar ke saare child components bhi bina wajah
+     dobara render ho jaate hain, bhale hi unka data badla ho ya na badla ho.
+
+     // 2 : -- React.memo:
+     • React.memo ke sath: React aapke child component ko wrap kar deta hai.
+      Agar parent render ho bhi jaye, to React check karta hai ki kya child ke props badle hain? 
+      Agar nahi badle, to wo purana rendered component hi reuse kar leta hai aur use dobara nahi banata.
+
+////   Teeno ka farq ek line mein:
+
+• useMemo: Kisi heavy calculation ka result (value) yaad rakhta hai.
+• useCallback: Kisi function ko yaad rakhta hai.
+• React.memo: Poore ke poore component ko yaad rakhta hai.
+
+//  Syntax :
+const MemoComp=React.memo(MyComponent)
