@@ -3,7 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo , useCallback,React.memo
+custom Hooks, Use memo , useCallback,React.memo,Redux
 
 
 
@@ -646,3 +646,62 @@ useRef React ka ek hook hai jo functional components mein mutable values ko stor
 
 //  Syntax :
 const MemoComp=React.memo(MyComponent)
+
+
+<---------------------------------------------------------------------------------------------------->
+<---------------------------> Redux <------------------------------------------------------------->
+
+install through npm website:
+(npm i @reduxjs/toolkit react-redux)
+
+/// redux:
+Redux aik global state management library hai jo React applications my data 
+(state) ko aik central jagah par store aur manage krny k liye use hoti hai.
+
+
+// main.jsx setup:
+import { StrictMode } from 'react'
+import ReactDom from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './app/store.js'
+
+ReactDom.createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Provider store={store}>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </Provider>
+  </StrictMode>
+)
+
+//folder (app) -> file (store.js):
+import { configureStore } from "@reduxjs/toolkit";
+export const store= configureStore({
+    reducer:{},
+})
+
+// folder(feature) in k anadr folder (counter) --> andar file(counterSlice):
+import { createSlice } from "@reduxjs/toolkit";
+const initialState={
+    value:0,
+}
+
+const counterSlice=createSlice({   //hum yha object ki surat my value d rhy hain
+    name:'counter',
+    initialState,
+    reducers:{},
+})
+export default counterSlice.reducer
+
+// App.jsx file:
+export default function App(){
+  return(
+    <>
+    <h1>redux set up complete</h1>
+    </>
+  )
+}
