@@ -3,7 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo , useCallback,React.memo,Redux
+custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook
 
 
 
@@ -705,3 +705,20 @@ export default function App(){
     </>
   )
 }
+
+<-------------------------------------------------------------------------------------------------->
+
+<-----------------------------------> Redux Hook <-------------------------------------------->
+Redux Hooks functional functions hain jo React components ko Redux store se data read karne (useSelector)
+ aur state update karne ke liye actions dispatch karne (useDispatch) ki sahulat dete hain.
+
+
+ // 1 : - Reducer:
+ Reducer ek pure function hota hai jo current state aur ek action ko lekar,
+  unke mutabiq ek nayi state return karta
+  hai taake Redux store ka data update ho sake.
+
+
+// 2 : - action
+Redux me action ek simple JavaScript object hota hai jo application me hone wale kisi event ya change
+ ko describe karta hai aur isme compulsory type property hoti hai.
