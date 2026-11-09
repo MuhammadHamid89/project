@@ -1,0 +1,12 @@
+import UseCounter from "./UseCounter";
+
+export default function  App(){
+const {count, increment,decrement}=UseCounter()
+return(
+  <div>
+    <h2>count: {count}</h2>
+    <button onClick={increment}>+</button>
+    <button onClick={decrement}>-</button>
+  </div>
+  )
+}
