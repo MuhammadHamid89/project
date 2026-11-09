@@ -732,3 +732,42 @@ Redux me action ek simple JavaScript object hota hai jo application me hone wale
 Redux middleware action dispatch hone aur reducer tak pahunche ke darmiyan
  asynchronous tasks (jaise API calls) 
 ya logging ko handle karne ke liye use hota hai, aur iski sabse aam misal Redux Thunk hai.
+
+// syntax :
+const reducer =(state,action)=>{
+  fetch(...)
+}
+
+createAsyncThunk(  //two parameter
+  'userfetch',    // <-- one is string
+  async () =>{    // <-- second is async
+    ...
+  }
+)
+
+
+dispatch(fetchUser())
+|
+pending
+|
+fulfilled
+Or
+|
+reject
+
+// complete flow
+
+component
+|
+dispatch(fetchUser()) // fetchUser is api
+|
+createAsyncThunk
+|
+middleware
+|
+success/error
+|
+reducer
+|
+store
+|component update

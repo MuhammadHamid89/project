@@ -1,0 +1,15 @@
+import { createSlice } from "@reduxjs/toolkit"
+
+const initialState={
+    byId:{
+        1: {id:1, title:'redux basic', userId:1,},
+        2: {id:2, title: 'react hooks', userId:2},
+    }
+}
+
+const blogSlice=createSlice({
+    name : 'blog',
+    initialState,
+    reducers:{}
+})
+export default blogSlice.reducer
