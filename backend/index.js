@@ -1,3 +1,6 @@
+//node mules with es modules
+
+
 // import greet from "./messageModuleES.js"
 // import { add,subtract } from "./moduleES.js"
 // greet('student')

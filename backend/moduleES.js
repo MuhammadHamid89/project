@@ -1,3 +1,5 @@
+//node mules with es modules
+
 export function add(a,b){
     return a + b
 }
