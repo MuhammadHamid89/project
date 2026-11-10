@@ -3,7 +3,7 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,
+custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop
 
 
 
@@ -771,3 +771,15 @@ reducer
 |
 store
 |component update
+
+
+<-------------------------------------------------------------------------------------------------->
+<---------------------------> Event Loop <------------------------------------------------------>
+Node.js mein Event Loop ek aisa nizam (mechanism) hai jo asynchronous aur
+ non-blocking operations ko background mein 
+handle karta hai aur unka kaam khatam hone par unke callbacks ko baari baari execute karta hai.
+
+// 1: call stack:
+Call stack ek aisa data structure hai jo JavaScript mein yeh track rakhta hai ke
+ is waqt kaun sa function chal raha hai aur uske baad kis
+ function ne chalna hai (LIFO - Last In, First Out ke usool par).
