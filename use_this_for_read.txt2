@@ -3,7 +3,8 @@
 cover fragments,condition operator, Ternary, AND operator,List, .map, components basic,props,prpo-drilling,
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
-custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop
+custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop,
+Node.js,Express.js
 
 
 
@@ -783,3 +784,16 @@ handle karta hai aur unka kaam khatam hone par unke callbacks ko baari baari exe
 Call stack ek aisa data structure hai jo JavaScript mein yeh track rakhta hai ke
  is waqt kaun sa function chal raha hai aur uske baad kis
  function ne chalna hai (LIFO - Last In, First Out ke usool par).
+
+
+ <----------------------------------------------------------------------------------------->
+ <-----------------------------> Express.js <---------------------------------------------->
+ Express.js ek fast aur lightweight Node.js web framework hai jo websites aur APIs 
+ ke backend (server-side) ko asani se banane aur manage karne ke liye istemal hota hai.
+
+
+ <------------------------------------------------------------------------------------------------->
+ <---------------------------> Node. js <------------------------------------------------------->
+
+Node.js ek open-source runtime environment hai jo JavaScript ko web browser 
+se bahar (server-side par) chalane aur backend applications banane ke liye istemal hota hai

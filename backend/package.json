@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node main.js",
-    "start": "nodemon main.js"
+    "dev": "node mainExpress.js",
+    "start": "nodemon mainExpress.js"
   },
   "keywords": [],
   "author": "",
