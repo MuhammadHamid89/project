@@ -4,7 +4,7 @@ cover fragments,condition operator, Ternary, AND operator,List, .map, components
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
 custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop,
-Node.js,Express.js, Express middleware
+Node.js,Express.js, Express middleware, Routing
 
 
 
@@ -803,3 +803,24 @@ se bahar (server-side par) chalane aur backend applications banane ke liye istem
 Express Middleware aise functions hain jo server par aane wali request aur response ke 
 darmiyan kaam karte hain, 
 aur yeh authentication, logging, ya data validate karne ke liye istemal hotay hain.
+
+
+<-------------------------------------------------------------------------------------------------->
+<--------------------------------------> built in middleware <-------------------------------------->
+
+uilt-in Middleware wo middleware functions hotay hain jo Express.js ke sath pehle 
+se mojood (default) hotay hain, jinhe alag se install karne ki zaroorat nahi parti aur aap unhe
+ seedha express. ke zariye istemal kar saktay hain.
+
+Express.js Ke Main Built-in Middlewares
+
+• express.json(): Yeh client se aane wale JSON data ko parse karta hai taake aap usay req.body mein read kar sakein.
+• express.urlencoded(): Yeh HTML forms se bheje gaye data ko parse karke req.body mein store karta hai.
+• express.static(): Yeh static files (jaise images, CSS, aur HTML files) ko server se browser par serve karne ke liye istemal hota hai.
+
+
+
+<----------------------------------------------------------------------------------------------------->
+<---------------------------------------- >basic routing <---------------------------------------------->
+Express Routing ka kaam client ki incoming HTTP requests (jaise GET, POST) ko unke specific URL endpoints
+ aur handler functions se connect karna hai, taake har request ka sahi response bheja ja sake.
