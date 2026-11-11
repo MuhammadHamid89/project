@@ -4,7 +4,7 @@ cover fragments,condition operator, Ternary, AND operator,List, .map, components
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
 custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop,
-Node.js,Express.js, Express middleware, Routing
+Node.js,Express.js, Express middleware, Routing, express router
 
 
 
@@ -824,3 +824,12 @@ Express.js Ke Main Built-in Middlewares
 <---------------------------------------- >basic routing <---------------------------------------------->
 Express Routing ka kaam client ki incoming HTTP requests (jaise GET, POST) ko unke specific URL endpoints
  aur handler functions se connect karna hai, taake har request ka sahi response bheja ja sake.
+
+
+ <------------------------------------------------------------------------------------------------->
+
+ <-------------------------> Express Router <--------------------------------------------------->
+
+ Express Routing ek overall process hai jo incoming HTTP requests ko unke
+  specific URLs aur functions se connect karta hai, jabke Express Router (express.Router()) ek modular
+  tool hai jo in routes ko alag-alag files mein organize aur manage karne ke liye istemal hota hai.

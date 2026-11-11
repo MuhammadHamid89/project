@@ -7,8 +7,8 @@
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node Express_Routing.js",
-    "start": "nodemon Express_Routing.js"
+    "dev": "node Express_Router.js",
+    "start": "nodemon Express_Router.js"
   },
   "keywords": [],
   "author": "",
