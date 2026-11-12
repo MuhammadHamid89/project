@@ -4,7 +4,7 @@ cover fragments,condition operator, Ternary, AND operator,List, .map, components
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
 custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop,
-Node.js,Express.js, Express middleware, Routing, express router
+Node.js,Express.js, Express middleware, Routing, express router,request object,Response object
 
 
 
@@ -846,3 +846,19 @@ MVC (Model-View-Controller) ek software architecture pattern hai jo
 application ko teen hisson mein taqseem karta hai: Model (database aur data logic),
  View (user interface), 
 aur Controller (dono ke darmiyan traffic aur business logic control karne wala hissa).
+
+
+<----------------------------------------------------------------------------------------------------->
+
+<----------------------------------------->Request object <---------------------------------------->
+
+Request object ek aisa programming object hai jo client (jaise browser) ki taraf 
+se server ko bheji gayi HTTP request ki saari maloomat
+, jaise form data, headers, aur URL parameters ko store karta hai
+
+
+<--------------------------------------------------------------------------------------------------->
+
+<-------------------------------------> Response object <------------------------------------------->
+Response object ek aisa programming object hai jise server
+ istemal karke client (browser) ko waapis data, HTML page, ya status code bhejta hai.
