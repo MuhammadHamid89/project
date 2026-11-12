@@ -7,8 +7,8 @@
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index_controller.js",
-    "start": "index_controller.js"
+    "dev": "node Request_Object.js",
+    "start": "nodemon Request_Object.js"
   },
   "keywords": [],
   "author": "",

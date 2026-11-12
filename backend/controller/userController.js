@@ -1,8 +1,13 @@
-function getUsers(req,res){
-    res.send('All user')
-}
-function createUser(req,res){
-    res.send('user created')
+
+//yaha hum do dafa export default function ni likh skty is liye esy likha hain
+export  function getUsers(req,res) {
+    res.send('All users')
 }
 
-export default {getUsers,createUser}
+export  function createUser(req,res){
+    res.send('All creater')
+}
+
+export function login(req,res){
+    res.send('all login')
+}
