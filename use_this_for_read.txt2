@@ -4,7 +4,7 @@ cover fragments,condition operator, Ternary, AND operator,List, .map, components
 useStae,state with object and spread operator, state lifting,event handler, Form, Handle UI, useeffect,
 API, React-router-dom, link and navlink and useNavigate, Context API, Reusable code and react composition,
 custom Hooks, Use memo , useCallback,React.memo,Redux, redux hook, redux middle ware,event loop,
-Node.js,Express.js, Express middleware, Routing, express router,request object,Response object
+Node.js,Express.js, Express middleware, Routing, express router,request object,Response object,error handling,
 
 
 
@@ -862,3 +862,9 @@ se server ko bheji gayi HTTP request ki saari maloomat
 <-------------------------------------> Response object <------------------------------------------->
 Response object ek aisa programming object hai jise server
  istemal karke client (browser) ko waapis data, HTML page, ya status code bhejta hai.
+
+ <----------------------------------------------------------------------------------------------->
+
+ <------------------------------------------> Error Handling <------------------------------------>
+ Error handling ek aisa tareeqa hai jiske zariye software ya program 
+ kisi kharabi (error) ko pehchan kar crash hone ke bajaye usay sahi tareeqe se sambhalta hai.
